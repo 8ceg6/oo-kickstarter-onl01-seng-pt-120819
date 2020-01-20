@@ -1,6 +1,6 @@
 require 'pry'
 class Backer 
-  attr_reader :name 
+  attr_reader :name, :backed_projects 
   
  
   
@@ -12,5 +12,6 @@ class Backer
   
   def backed_project(project)
     @backed_projects << project
+    project.backers << self 
   end 
 end 
