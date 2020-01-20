@@ -1,11 +1,16 @@
+require 'pry'
 class Backer 
   attr_reader :name 
   
-  @@all= []
+ 
   
   def initialize(name)
       @name = name 
       @backed_projects = []
-      @@all << self 
+       
+  end 
+  
+  def backed_project(project)
+    @backed_projects << project
   end 
 end 
